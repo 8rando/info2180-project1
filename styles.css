@@ -1,11 +1,264 @@
-/* Add your CSS to this file */
+/* Existing CSS maintained and new or modified styles are integrated below */
+
+/* Global Styles */
 body {
-    margin: 0;
-    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif;
+    background-color: #E9ECEF;
+    font-size: 18px;
+    margin: 100px;
+    padding: 100px;
 }
 
-.container {
-    margin: 0 auto;
-    max-width: 960px;
+header {
+    background-color: white;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Added padding for spacing */
+}
+
+header h1, header nav ul li a {
+    font-size: 18px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0px;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    padding: 5px 10px;
+}
+
+header ul li a:hover {
+    color: #5A67D8;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        padding: 20px; /* Added padding for better spacing on mobile */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+/* Hero Overview Section */
+.overview-hero {
+    background-color: #E2E8F0;
+    display: flex;
+    flex-wrap: wrap; /* Changed to wrap for responsiveness */
+    align-items: center;
+    padding: 30px;
+}
+
+.overview-hero-image,
+.overview-hero-text {
+    flex: 1; /* Flex property to allocate space evenly */
+}
+
+.overview-hero img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* Learn About Section */
+.learn-about {
+    padding: 20px;
+}
+
+.learn-about h2 {
+    font-size: 24px;
+    color: #48BB78;
+}
+
+.learn-about .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Updated to grid for responsive cards */
+    gap: 20px;
+}
+
+.learn-about .card {
+    border: 1px solid #E2E8F0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Added overflow hidden to maintain the border radius */
+}
+
+.learn-about .card img {
     width: 100%;
+    height: auto;
+}
+
+.learn-about .card-body {
+    padding: 20px; /* Added padding for spacing */
+}
+
+.learn-about h3 {
+    font-size: 21px;
+    color: #48BB78;
+}
+
+/* COVID-19 Testing Section */
+.testing {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #4A5568;
+    color: white;
+}
+
+.testing .testing-description {
+    margin-right: auto;
+}
+
+.testing .cta {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.testing .btn {
+    background-color: #48BB78;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none; /* Removed text underline for link styled as a button */
+}
+
+
+/* Recent Stories Section */
+.stories article {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Adjustments to the .stories img selector for circular images */
+.stories img {
+    width: 80px;  /* Adjust width as needed for size */
+    height: 80px; /* Adjust height to match width for a circle */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    margin-right: 20px; /* Adds some space between the image and the text */
+}
+
+
+.stories .article-body {
+    padding: 20px; /* Added padding for spacing */
+}
+
+/* Newsletter Section */
+.newsletter {
+    background-color: #48BB78;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.newsletter .form-group {
+    margin-bottom: 10px; /* Added margin for spacing */
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none; /* Remove default border */
+    margin-right: 10px;
+    width: 100%; /* Full width for small screens */
+}
+
+.newsletter input[type="submit"] {
+    background-color: white;
+    color: #48BB78;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.newsletter .message {
+    margin-top: 20px;
+    font-weight: bold;
+}
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #5A67D8; /* Blueish color for the button */
+    color: white;
+    border: none;
+    border-top-right-radius: 5px; /* Soft rounded corners for right side of button */
+    border-bottom-right-radius: 5px;
+    cursor: pointer; /* Changes the cursor to a hand when hovering over the button */
+}
+
+.newsletter button:hover {
+    background-color: #4C5BD4; /* Slightly darker color for button hover */
+}
+
+
+/* Responsive Newsletter Form */
+@media (min-width: 576px) {
+    .newsletter form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .newsletter input[type="email"] {
+        margin-right: 10px;
+        width: auto; /* Auto width for larger screens */
+        flex-grow: 1; /* Takes up available space */
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #4A5568;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Utilizing media queries for responsiveness */
+@media (max-width: 992px) {
+    .overview-hero-text,
+    .testing-description {
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .testing .cta {
+        margin-top: 20px; /* Add space for the button when stacked */
+        margin-left: 0;
+    }
 }

@@ -16,6 +16,7 @@ header {
 
 
 
+
 header .container {
     display: flex;
     justify-content: space-between;
@@ -73,34 +74,39 @@ header ul li a:hover {
 /* Hero Overview Section */
 .overview-hero {
     background-color: #E2E8F0;
-    display: flex;
-    flex-direction: row;
-    /* flex-wrap: wrap; Changed to wrap for responsiveness */
-    align-items: center;
-    justify-content: flex-start;
-    padding: 30px;
+    color: black;
+    clear: both;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
 }
 
 
 .overview-hero-image {
-    flex: 0 0 auto;
-    max-width: 10%;
-    margin-right: px;
-    height: 280px;
+    float: left;
+    margin: 10px;
+    padding: 10px;
 }
 
+
+
 .overview-hero-text {
-    flex: 1; /* Flex property to allocate space evenly */
+    width: 80%;
+    padding: 30px;
+    margin: 30px;
+    white-space: normal;
 }
 
 .overview-hero img {
-    max-width: 100%;
-    height: auto;
-    margin-right: 20px;
+    float: left;
+    margin: 10px;
+    padding: 10px;
+    width: 125px;
+    height: 125px;
 }
 
 
-@media (maz-width: 768px) {
+@media (max-width: 768px) {
     .overview-hero {
         flex-direction: colum;
     }
@@ -148,23 +154,31 @@ header ul li a:hover {
     font-size: 21px;
     color: #48BB78;
 }
+
+
 /* COVID-19 Testing Section */
 .testing {
-    display: flex;
-    align-items: center;
-    padding: 20px;
     background-color: #4A5568;
     color: white;
+    padding: 50px;
+    margin: 0;
+    height: 150px;
 }
 
-.testing .testing-description {
-    padding-right: 350px;
+.testing-description {
+    width: 80%;
+    float: left;
 }
 
-.testing .cta {
-    margin-right: auto;
-    display: flex;
-    align-items: right;
+.cta a {
+    float:right;
+    text-decoration: none;
+    background-color: #48BB78;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 50px;
+    color: white;
+
 }
 
 .testing .btn {
@@ -187,8 +201,8 @@ header ul li a:hover {
 
 /* Adjustments to the .stories img selector for circular images */
 .stories img {
-    width: 80px;  /* Adjust width as needed for size */
-    height: 80px; /* Adjust height to match width for a circle */
+    width: 250px;  /* Adjust width as needed for size */
+    height: 250px; /* Adjust height to match width for a circle */
     border-radius: 50%; /* Makes the image circular */
     object-fit: cover; /* Ensures the image covers the area without distortion */
     margin-right: 20px; /* Adds some space between the image and the text */

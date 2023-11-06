@@ -225,7 +225,7 @@ header ul li a:hover {
 }
 
 .newsletter .form-group {
-    margin-bottom: 10px; /* Added margin for spacing */
+    margin-bottom: 0px; /* Added margin for spacing */
 }
 
 .newsletter input[type="email"] {
@@ -282,8 +282,9 @@ header ul li a:hover {
 /* Footer Styles */
 footer {
     background-color: #4A5568;
-    padding: 20px;
-    text-align: center;
+    padding: 30px;
+    padding-left: 50px;
+    text-align: left;
     color: white;
 }
 
@@ -295,7 +296,7 @@ footer p {
 @media (max-width: 992px) {
     .overview-hero-text,
     .testing-description {
-        text-align: center; /* Center text for smaller screens */
+        text-align: left; /* Center text for smaller screens */
     }
 
     .testing .cta {
